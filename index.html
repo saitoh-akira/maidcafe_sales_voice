@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>音声再生ページ</title>
+
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* 見出し用文字サイズ（スマホで大きく） */
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* ボタンを大きめに */
+button {
+  font-size: 22px;
+  padding: 14px 28px;
+  margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>音声を再生するには<br>下のボタンを押してください</h2>
+
+<button onclick="document.getElementById('voice').play()">
+▶ 音声を再生
+</button>
+
+<audio id="voice" src="voice01.mp3"></audio>
+
+</body>
+</html>
