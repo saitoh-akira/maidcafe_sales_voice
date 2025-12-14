@@ -3,41 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<title>音声再生ページ</title>
+<title>ビデオ再生ページ</title>
 
 <style>
 body {
   font-family: sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
-/* 見出し用文字サイズ（スマホで大きく） */
+/* 見出し（スマホで大きく） */
 h2 {
   font-size: 26px;
   font-weight: bold;
   line-height: 1.4;
 }
 
-/* ボタンを大きめに */
+/* 再生ボタン */
 button {
   font-size: 22px;
   padding: 14px 28px;
   margin-top: 20px;
+}
+
+/* 動画サイズ（スマホ優先） */
+video {
+  width: 90%;
+  max-width: 360px;
+  margin-top: 20px;
+  border-radius: 12px;
 }
 </style>
 
 </head>
 <body>
 
-<h2>音声を再生するには<br>下のボタンを押してください</h2>
+<h2>ビデオを再生するには<br>下のボタンを押してください</h2>
 
-<button onclick="document.getElementById('voice').play()">
-▶ 音声を再生
+<button onclick="document.getElementById('video').play()">
+▶ ビデオを再生
 </button>
 
-<audio id="voice" src="voice01.mp3"></audio>
+<br>
+
+<video
+  id="video"
+  src="video01.mp4"
+  playsinline
+  controls
+>
+  お使いのブラウザは動画再生に対応していません
+</video>
 
 </body>
-
 </html>
